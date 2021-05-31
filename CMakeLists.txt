@@ -16,7 +16,7 @@ find_package(ament_cmake REQUIRED)
 
 macro(build_librealsense)
   set(cmake_commands)
-  set(cmake_configure_args -w;-Wno-dev;-DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
+  set(cmake_configure_args -Wno-dev;-DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
 
   include(ExternalProject)
   externalproject_add(librealsense-ext
